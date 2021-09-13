@@ -47,7 +47,7 @@ body {
   border: 1px solid cyan;
 } */
 .single-product {
-  background-color: rgba(241, 237, 237, 0.411);
+  background-color: rgba(241, 237, 237, 0.685);
   height: 440px;
   cursor: pointer;
   padding: 20px 10px;
@@ -65,6 +65,7 @@ body {
 .cart {
   width: 350px;
   /* border: 1px solid green; */
+  background-color: rgba(241, 237, 237, 0.685);
   padding: 10px;
   box-shadow: 10px 10px 20px gray;
   border-radius: 5px;
