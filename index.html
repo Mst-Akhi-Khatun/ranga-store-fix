@@ -18,28 +18,27 @@
 </head>
 
 <body>
+  <!-- header part -->
   <header>
     <h1 class="text-center">Welcome to Happy Shopping Store</h1>    
   </header>
   <!-- main part start -->
-  <main class="main">
-    <!-- search part -->
-    <div class="search-field">
-      <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
-        </button>
-      </div>
-    </div>    
+  <main class="main">    
+      <!-- search box starts -->
+    <div class="search-box">
+      <input id="input-field" class="search-field" type="text" placeholder="Search your products" />
+      <button id="search-btn" class="search-button" onclick="loadProducts()">
+        Search
+      </button>
+    </div>
+         
     <div class="row">
-      <!-- product part -->
+      <!-- product part start-->
       <div class="col-md-9 col-lg-9 col-sm-7">
         <div id="all-products" class="">          
         </div>
       </div>
-      <!-- cart part -->
+      <!-- cart part start-->
       <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
         <div class="cart" id="my-cart">
           <table class="table">
@@ -91,7 +90,7 @@
       </div>
     </div>
   </main>
-  <!-- footer starts -->
+  <!-- footer part starts -->
   <footer>
     <p class="text-center my-5">Copyright &copy;2022. All rights reserved</p>
   </footer>

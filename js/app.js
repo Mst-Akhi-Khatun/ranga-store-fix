@@ -5,7 +5,7 @@ const loadProducts = () => {
     .then((response) => response.json())
     .then((data) => showProducts(data));
 };
-loadProducts();
+loadProducts();  //function call
 
 // show all product in UI 
 const showProducts = (products) => {  
@@ -14,17 +14,19 @@ const showProducts = (products) => {
     const image = product.image;
     const div = document.createElement("div");
     div.classList.add("product");
-    div.innerHTML = `<div class="single-product" style="margin:9px;">
+    div.innerHTML = `
+    <div class="single-product" style="margin:9px;">
       <div>
-    <img class="product-image" src=${image}></img>
+          <img class="product-image" src=${image}></img>
       </div>
       <h4>${product.title}</h4>
       <p>Category: ${product.category}</p>
       <p>Rating: ${product.rating.rate}</p>
       <p>Total Rating: ${product.rating.count}</p>
       <h3>Price: $ ${product.price}</h3>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-primary">Details</button></div>
+      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-info">add to cart</button>
+      <button id="details-btn" class="btn btn-primary">Details</button>
+    </div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
@@ -33,12 +35,13 @@ const showProducts = (products) => {
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
-  updatePrice("price", price);
-  updateTaxAndCharge();
+  updatePrice("price", price);   //function call
+  updateTaxAndCharge();          //function call
   document.getElementById("total-Products").innerText = count;
-  updateTotal();
+  updateTotal();    //function call
 };
 
+// get input value
 const getInputValue = (id) => {
   const element = document.getElementById(id).innerText;
   const converted = parseFloat(element);  
